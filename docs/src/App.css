@@ -28,6 +28,39 @@
   color: #61dafb;
 }
 
+.Site {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.navbar {
+  background-color: #7398c6;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  padding: 10px 20px;
+  z-index: 1;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  background-color: #b5d0f0; 
+  padding: 15px;
+  height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  gap: 25%; 
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

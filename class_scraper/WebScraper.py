@@ -6,11 +6,11 @@ import requests
 import json
 import nltk
 
-class RecipeCrawler:
+class ClassCrawler:
     def __init__(self, base_url):
         self.base_url = base_url
         self.visited = set()
-        self.recipe_links = []
+        self.class_links = []
 
     def start(self, start_url):
         self.crawl(start_url)
@@ -31,7 +31,7 @@ class RecipeCrawler:
         #     except Exception as e:
         #         print (f"Error while crawling: {e}") 
 
-        return self.recipe_links 
+        return self.class_links 
 
 
     def crawl(self, url):
@@ -46,15 +46,16 @@ class RecipeCrawler:
             
             soup = BeautifulSoup(response.content, 'html.parser')
 
-            for item in soup.find_all("div", {"class": "views-row"}):
+            for item in soup.select('li.course-button.block.w-full.text-left.p-6.border-b.border-gray-100.cursor-pointer.overflow-hidden.hover\:bg-gray-50'):
                 for link in item.find_all('a', href=True):
                     full_url = urljoin(self.base_url, link['href'])
 
-                    if self.is_recipe_page(full_url):
-                        if full_url in self.recipe_links:
+                    if self.is_cs_page(full_url):
+                        if full_url in self.class_links:
                             continue
                         else:
-                            self.recipe_links.append(full_url)
+                            print("HERE")
+                            self.class_links.append(full_url)
                             self.crawl(full_url)
                     else:
                         if urlparse(full_url).netloc == urlparse(self.base_url).netloc:
@@ -63,11 +64,11 @@ class RecipeCrawler:
         except Exception as e:
             print (f"Error while crawling {url}: {e}") 
 
-    def is_recipe_page(self, url):
+    def is_cs_page(self, url):
         response = requests.get(url)
         soup = BeautifulSoup(response.text, 'html.parser')
         
-        if 'ingredients' in soup.get_text():
+        if 'computer science' in soup.get_text():
             return True
         else:
             return False 
@@ -131,38 +132,6 @@ def save_recipe_info(url):
 
 
     return parsed_recipe
-    # if recipe_title := scraper.title():
-    #     return recipe_title
-        # if recipe_description := scraper.description():
-        #     if recipe_image := scraper.image():
-        #         if recipe_cooktime := scraper.cook_time():
-        #             if recipe_nutrients := scraper.nutrients():
-        #                 if recipe_cuisine := scraper.cuisine():
-        #                     if recipe_restrictions := scraper.dietary_restrictions():
-        #                         if recipe_equipment := scraper.equipment():
-        #                             if recipe_keywords := scraper.keywords():
-        #                                 if recipe_url := scraper.canonical_url():
-        #                                     if recipe_ingredients := scraper.ingredients():
-        #                                         parsed_ingredients = []
-        #                                         for ingredient in ingredients:
-        #                                             parsed_ingredients.append(parse_ingredient(ingredient))
-                                                
-        #                                         parsed_recipe = {
-        #                                             'title': recipe_image,
-        #                                             'description': recipe_description,
-        #                                             'image': recipe_image,
-        #                                             'cooktime': recipe_cooktime,
-        #                                             'nutrients': recipe_nutrients,
-        #                                             'cuisine': recipe_cuisine,
-        #                                             'restrictions': recipe_restrictions,
-        #                                             'equipment': recipe_equipment,
-        #                                             'keywords': recipe_keywords,
-        #                                             'url': recipe_url,
-        #                                             'ingredients': parsed_ingredients
-        #                                         }
-
-        #                                         return parsed_recipe
-    # return None
 
 
 def save_recipes(recipes, filename='recipes.json'):
@@ -172,30 +141,22 @@ def save_recipes(recipes, filename='recipes.json'):
 
 
 def main():
-    start_url = "https://www.myplate.gov/myplate-kitchen/recipes"
-    base_url = "https://www.myplate.gov/recipes/"
-    crawler = RecipeCrawler(base_url)
-    recipe_urls = crawler.start(start_url)
+    start_url = "https://catalog.byu.edu/courses?page=1&cq"
+    base_url = "https://catalog.byu.edu/courses/01492"
 
-    recipe_list = []
-    for url in recipe_urls:
-        recipe_list.append(save_recipe_info(url))
+    crawler = ClassCrawler(base_url)
+    class_urls = crawler.start(start_url)
 
-    print(len(recipe_list))
+    print(len(class_urls))
 
-    save_recipes(recipe_list)
+    # recipe_list = []
+    # for url in recipe_urls:
+    #     recipe_list.append(save_recipe_info(url))
 
-    # print("Found recipe pages:")
-    # for recipe in recipes:
-    #     print(recipe)
+    # print(len(recipe_list))
 
-    # url = "https://www.allrecipes.com/recipe/158968/spinach-and-feta-turkey-burgers/"
-    # html = requests.get(url, headers={"User-Agent": f"Burger Seeker {'Mia'}"}).content
-    # scraper = scrape_html(html, org_url=url)
-    
-    # ingredients = scraper.ingredients()
-    # for ingredient in ingredients:
-    #    print(parse_ingredient(ingredient))
+    # save_recipes(recipe_list)
+
 
 if __name__ == '__main__':
     main()

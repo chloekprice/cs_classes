@@ -1,0 +1,209 @@
+[
+  {
+    "class_name": "Academic Internship",
+    "class_code": "C S 199R",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [],
+    "description": "Internships or cooperative education experiences with organizations outside BYU.",
+    "when_taught": "Contact Department"
+  },
+  {
+    "class_name": "Advanced Algorithms and Problem Solving",
+    "class_code": "C S 393",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": ["C S 312 - Algorithm Design and Analysis"],
+    "description": "This course will help students to become better at problem solving, increasing their ability to excel at technical/coding interviews (a challenging part of the hiring/interviewing process).  Students will build on the algorithms and problem-solving strategies that they were taught and had limited practice with in CS 312. learning primarily through targeted practice.  This will result in (1) strengthened skills in each style of problem-solving strategy and (2) the ability to quickly decide which strategy(ies) to apply to a given problem.  Students are expected to spend 6+ hours outside of class each week solving interview-type problems. ",
+    "when_taught": "Fall and Winter"
+  },
+  {
+    "class_name": "Advanced Machine Learning",
+    "class_code": "C S 473",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [
+      "C S 270 - Introduction to Machine Learning",
+      "MATH 213 - Elementary Linear Algebra",
+      "MATH 215 - Computational Linear Algebra"
+      ],
+    "description": "Understand the fundamental models of machine learning, such as neural networks, decision trees, data mining, clustering, Bayesian learning, ensembles, reinforcement learning, and deep learning. Work with data and machine learning tools in real world applications.",
+    "when_taught": "Fall and Winter"
+  },
+  {
+    "class_name": "Advanced Shading",
+    "class_code": "CSANM 454",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [],
+    "description": "Advanced shading, rendering, and lighting methods for creating virtual scenes that emphasize story and innovatively meet an art director's vision through traditional and procedural methods.",
+    "when_taught": "Winter"
+  },
+  {
+    "class_name": "Advanced Software Construction",
+    "class_code": "C S 240",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [ "C S 235 - Data Structures and Algorithms"
+    ],
+    "description": "Advanced software development with an object-oriented focus. Design, implementation, and testing of medium-sized programs including a server program.",
+    "when_taught": "All Semesters/Terms"
+  },
+  {
+    "class_name": "Advanced Techniques in Human Computer Interaction",
+    "class_code": "C S 356",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [
+      "C S 256 - Introduction to Human Computer Interaction",
+      "C S 260 - Web Programming"
+    ],
+    "description": "This class combines designing the user experience with implementing the technology. Students learn website design, information architecture, and how to design for the broader ecosystem of use. Finally, students will learn principles specifically relevant to website design and information architecture. Web design is one of the most common UX jobs and so this makes their skills highly marketable.",
+    "when_taught": "Fall and Winter"
+  },
+  {
+    "class_name": "Advanced Topics in Computer Science",
+    "class_code": "C S 501R",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [],
+    "description": "Advanced undergraduate- and graduate-level subjects as announced before each semester.",
+    "when_taught": "Fall"
+  },
+  {
+    "class_name": "Algorithm Design and Analysis",
+    "class_code": "C S 312",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [
+      "C S 236 - Discrete Structures"
+    ],
+    "description": "A study of the design and analysis of algorithms as solutions to problems, including dynamic programming, linear programming, greedy algorithms, divide-and-conquer algorithms, graph algorithms, and intelligent search algorithms.",
+    "when_taught": "Fall and Winter"
+  },
+  {
+    "class_name": "Algorithmic Languages and Compilers",
+    "class_code": "C S 431",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [
+      "C S 340 - Software Design"
+    ],
+    "description": "Formal description of algorithmic languages and techniques used in their compilation:  semantics, ambiguities, procedures, replication, iteration, recursion.",
+    "when_taught": "Contact Department"
+  },
+  {
+    "class_name": "Animated Film Production 1",
+    "class_code": "CSANM 352",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [],
+    "description": "Early development of a film, including character design, environments, pipeline, visual effects, and the look and feel the film. All pre-visualization of the film. Practice collaborative production processes through interdisciplinary creative works or experiences.",
+    "when_taught": "Winter"
+  },
+  {
+    "class_name": "Animated Film Production 2",
+    "class_code": "CSANM 450",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [],
+    "description": "In-depth experiences creating computer animations and visual effects.  Senior film front-end development and introduction to full animation production.",
+    "when_taught": "Fall"
+  },
+  {
+    "class_name": "Animated Film Production 3",
+    "class_code": "CSANM 452",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [],
+    "description": "Portfolio development based on advanced animation/design projects. Senior film production and post production.",
+    "when_taught": "Winter"
+  },
+  {
+    "class_name": "BFA Final Project",
+    "class_code": "CSANM 497R",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [],
+    "description": "Advanced individual project with minimum guidance, showing high degree of competence within chosen major.",
+    "when_taught": "Contact Department"
+  },
+  {
+    "class_name": "Blockchain Technologies",
+    "class_code": "C S 466",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [
+      "C S 312 - Algorithm Design and Analysis"
+    ],
+    "description": "Technical underpinnings of blockchain-based systems, including cryptocurrency, smart contracts, decentralized finance (De-Fi), and Web3. Explores which problems are suitable for a blockchain-based solution and discusses arguments in favor and against blockchain systems.",
+    "when_taught": "Winter"
+  },
+  {
+    "class_name": "(C S-Chem-Geol-Math-MthEd-Phscs-Stat) Business Career Essentials in Science and Math",
+    "class_code": "C S 500",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [],
+    "description": "Introduction for science, math, and statistics majors to careers in industry. Project planning, oral and written business presentations, business accounting, and technology readiness.",
+    "when_taught": "Winter"
+  },
+  {
+    "class_name": "Capstone 1",
+    "class_code": "C S 494",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [
+      "C S 240 - Advanced Software Construction"
+    ],
+    "description": "Culminating experience based on skills learned in advanced technical courses. Students work in teams to plan, design, test, and demonstrate a major project.",
+    "when_taught": "Contact Department"
+  },
+  {
+    "class_name": "Capstone 2",
+    "class_code": "C S 495",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [
+      "C S 240 - Advanced Software Construction"
+    ],
+    "description": "The second semester of a culminating experience based on skills learned in advanced technical courses. Students work in teams to plan, design, test, and demonstrate a major project.",
+    "when_taught": "Contact Department"
+  },
+  {
+    "class_name": "Careers in Computer Science",
+    "class_code": "C S 291",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [
+      "C S 111 - Introduction to Computer Science",
+      "C S 191 - Exploring Computer Science"
+    ],
+    "description": "Career advising for students in computer science. Advice on resumes, applications, and interviews for internships, full-time jobs, and graduate school. Opportunities to network with other students and with employers.",
+    "when_taught": "Fall and Winter"
+  },
+  {
+    "class_name": "Computer Communications and Networking",
+    "class_code": "C S 460",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [
+      "C S 324 - Systems Programming "
+    ],
+    "description": "Introduction to data communications and computer networking.  Communications fundamentals, computer networks, software, architecture, telecommunications, regulation, standards.",
+    "when_taught": "Fall and Winter"
+  },
+  {
+    "class_name": "Computer Graphics",
+    "class_code": "C S 455",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [
+      "C S 355 - Interactive Graphics and Image Processing",
+      "MATH 213 - Elementary Linear Algebra",
+      "MATH 215 - Computational Linear Algebra"
+    ],
+    "description": "Interactive computer graphics systems programming and architecture.",
+    "when_taught": "Winter"
+  }
+]

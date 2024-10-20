@@ -1,0 +1,99 @@
+[
+  {
+    "class_name": "Topics in Computer Science",
+    "class_code": "C S 201R",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [],
+    "description": "Undergraduate level subjects as announced before each semester.",
+    "when_taught": "Fall"
+  },
+  {
+    "class_name": "Transformer Models for Natural Language Processing",
+    "class_code": "C S 574",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [
+      "C S 270 - Introduction to Machine Learning",
+      "C S 312 - Algorithm Design and Analysis"
+    ],
+    "description": "Understand and learn how to use state of the art transformer language models for many Natural Language Processing and Understanding tasks, such as text classification, text generation, question answering, machine translation, and many other tasks.",
+    "when_taught": "Fall"
+  },
+  {
+    "class_name": "Undergraduate Research",
+    "class_code": "C S 497R",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [],
+    "description": "Students receive course credit for doing undergraduate research under the supervision of a faculty mentor.",
+    "when_taught": "All Semesters/Terms"
+  },
+  {
+    "class_name": "Undergraduate Special Projects",
+    "class_code": "C S 498R",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [
+      "C S 240 - Advanced Software Construction"
+    ],
+    "description": "Students identify an interesting problem in computer science and solve it with the aid of faculty members.",
+    "when_taught": "All Semesters/Terms"
+  },
+  {
+    "class_name": "Verification and Validation",
+    "class_code": "C S 486",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [
+      "C S 312 - Algorithm Design and Analysis"
+      ],
+    "description": "Foundational topics in verification and validation; the application of logic to building correct systems. Covers logics to formally specify properties of systems, verifications of basic systems, and advanced topics in formal verification for complex systems.",
+    "when_taught": "Winter"
+  },
+  {
+    "class_name": "Video Game Production 1",
+    "class_code": "CSANM 459",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [],
+    "description": "Using prototyping to develop game experience ideas by building a minimal viable product around a core experience idea. Participating in a team and coordinating tasks, including white-boxing, concept design, modeling, layout, rigging, and tool building.",
+    "when_taught": "Fall"
+  },
+  {
+    "class_name": "Video Game Production 2",
+    "class_code": "CSANM 460",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [],
+    "description": "Polishing a video game for production as a team, including texturing, animation, FX, lighting, tool applications, AI, UI, and gameplay mechanics.",
+    "when_taught": "Winter"
+  },
+  {
+    "class_name": "Visual Narrative for Animation",
+    "class_code": "CSANM 210",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [],
+    "description": "This class teaches foundational skills that animation students require when working in a shot-based production environment. Cinematography, layout, composition and storytelling techniques will be a focus of study.",
+    "when_taught": "Fall"
+  },
+  {
+    "class_name": "Voice User Interfaces",
+    "class_code": "C S 471",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [],
+    "description": "Methods and development platforms for Voice User Interfaces. Principles of effective design; differences from visual or menu-based interfaces\u2019 mechanics of automatic speech recognition, intent detection, slot filling, dialog state tracking, text generation, and knowledge representation.",
+    "when_taught": "Winter"
+  },
+  {
+    "class_name": "Web Programming",
+    "class_code": "C S 260",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [],
+    "description": "Introduction to web application design and implementation. Both front end and back end development with an emphasis on REST architectures.",
+    "when_taught": "Fall and Winter"
+  }
+]

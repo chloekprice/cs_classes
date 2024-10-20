@@ -1,42 +1,60 @@
 import React from 'react';
 
-function displayClass() {
+function displayClass(info_class) {
     return(
         <div>
             <div>
-                {showClassSummary()}
+                {showClassSummary(info_class)}
             </div>
             <div>
-                {showPotentialTracks()}
+                {showPotentialTracks(info_class)}
             </div>
         </div>
     );
 }
 
-function showClassSummary() {
+function showClassSummary(info_class) {
+    var class_info = {
+        "class_name": "",
+        "class_code": "",
+        "class_type": "",
+        "emphasis": "",
+        "pre_req": [],
+        "description": "",
+        "when_taught": ""
+    }
+    const info = require('./CSClasses.json');
+
+    for(let i = 0; i < info.length; i++) {
+        if (info[i]['class_code'] === info_class) {
+            class_info['class_name'] = info[i]['class_name']
+            class_info['class_code'] = info[i]['class_code']
+            class_info['description'] = info[i]['description']
+            class_info['pre_req'] = info[i]['pre_req']
+            class_info['when_taught'] = info[i]['when_taught']
+        }
+    }
+    
+        
     return (
         <div style={{ paddingLeft: '20px', paddingRight: '20px' }}>
-            <h1>CS 111: Intro to Computer Science</h1>
-            <p>Teaches how to design, develop, reason about, and test programs. 
-                Topics include higher-order functions, object-oriented programming, 
-                recursion, algorithms, data structures, decomposition, interpreters, 
-                and regular expressions.</p>
+            <h1>{class_info.class_code}: {class_info.class_name}</h1>
+            <p>{class_info.description}</p>
 
             <div className="flex-containers">
                 <h2 style={{ flex: '2' }}>Pre-Requisite Courses:</h2>
-                <p style={{ flex: '3', margin: 0 }}>None</p>
+                <p style={{ flex: '3', margin: 0 }}>{class_info.pre_req}</p>
             </div>
 
             <div className="flex-containers">
                 <h2 style={{ flex: '2' }}>When Taught:</h2>
-                <p style={{ flex: '3', margin: 0 }}>Fall, Winter, Spring, Summer</p>
+                <p style={{ flex: '3', margin: 0 }}>{class_info.when_taught}</p>
             </div>
         </div>
     );
 }
 
-
-function showPotentialTracks() {
+function showPotentialTracks(info_class) {
     return (
         <div style={{ padding: '20px'}}>
             <h1>Potential Tracks</h1>

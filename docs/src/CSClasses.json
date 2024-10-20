@@ -23,8 +23,8 @@
       "class_type": "",
       "emphasis": "",
       "pre_req": [
-        "C S 270 - Introduction to Machine Learning",
-        "MATH 213 - Elementary Linear Algebra",
+        "C S 270 - Introduction to Machine Learning\n",
+        "MATH 213 - Elementary Linear Algebra\n",
         "MATH 215 - Computational Linear Algebra"
         ],
       "description": "Understand the fundamental models of machine learning, such as neural networks, decision trees, data mining, clustering, Bayesian learning, ensembles, reinforcement learning, and deep learning. Work with data and machine learning tools in real world applications.",
@@ -223,8 +223,8 @@
         "class_type": "",
         "emphasis": "",
         "pre_req": [
-          " C S 312 - Algorithm Design and Analysis",
-          "MATH 213 - Elementary Linear Algebra",
+          " C S 312 - Algorithm Design and Analysis\n",
+          "MATH 213 - Elementary Linear Algebra\n",
           "MATH 215 - Computational Linear Algebra"
         ],
         "description": "Introduction to fundamental concepts and algorithms of computer vision, including feature extraction, detection, segmentation, registration, recognition, motion, 3D vision, and image understanding. Applies techniques from image processing, geometry, Bayesian methods, optimization, and machine learning to computer vision problems.",
@@ -247,16 +247,9 @@
         "class_type": "",
         "emphasis": "",
         "pre_req": [
-          "Expand All",
-          "\n                  Prerequisites\n                  \n                 ",
-          "\n      Unnamed Rule\n      \n     ",
-          "\n      Unnamed Rule\n      \n     ",
           "\n              C S 236 - Discrete Structures\n            ",
           "\n              C S 260 - Web Programming\n            ",
-          "\n      Unnamed Rule\n      \n     ",
-          "\n              C S 236 - Discrete Structures\n            ",
           "\n              C S 224 - Introduction to Computer Systems\n            ",
-          "\n      Unnamed Rule\n      \n     ",
           "\n              MATH 290 - Fundamentals of Mathematics\n            ",
           "\n              C S 235 - Data Structures and Algorithms\n            "
         ],

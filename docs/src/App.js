@@ -1,5 +1,6 @@
 import './App.css';
 import displayClass from './ClassInfoDisplay';
+import React, { useState } from 'react';
 import Tabs from './Tabs';
 import Sidebar from './Sidebar';
 
@@ -12,6 +13,17 @@ function App() {
     { label: "Outcomes"}
   ];
 
+  const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedValue, setSelectedValue] = useState('');
+
+  const handleOptionSelect = (option) => {
+    setSelectedOption(option);
+  };
+
+  const handleValueSelect = (value) => {
+    setSelectedValue(value);
+  };
+
   return (
     <div className="Site">
       <div className="navbar">
@@ -20,10 +32,10 @@ function App() {
       
       <div className="content">
         <div className="sidebar">
-          <Sidebar />
+          <Sidebar onOptionSelect={handleOptionSelect} onValueSelect={handleValueSelect}/>
         </div>
         <div className="main-content">
-          {displayClass()}
+          {displayClass(selectedOption)}
         </div>
       </div>
     </div>

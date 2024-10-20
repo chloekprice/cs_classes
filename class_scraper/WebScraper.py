@@ -1,37 +1,23 @@
 from recipe_scrapers import scrape_html
+from lxml.html.soupparser import convert_tree
 from ingredient_parser import parse_ingredient
 from urllib.parse import urljoin, urlparse
 from bs4 import BeautifulSoup
+from selenium import webdriver
 import requests
+import time
 import json
 import nltk
 
-class RecipeCrawler:
+class ClassCrawler:
     def __init__(self, base_url):
         self.base_url = base_url
         self.visited = set()
-        self.recipe_links = []
+        self.class_links = []
 
     def start(self, start_url):
         self.crawl(start_url)
-
-        # for i in range(2):
-        #     try:
-        #         response = requests.get(start_url)
-        #         if response.status_code != 200:
-        #             return
-                
-        #         meal = BeautifulSoup(response.content, 'html.parser')
-        #         for page in meal.find_all("nav", {"class": "pager"}):
-        #             for next_one in page.find_all("li", {"class": "pager__item--next"}):
-        #                 for link in next_one.find_all('a', href=True):
-        #                     full_url = urljoin(start_url, link['href'])
-        #                     start_url = full_url
-        #                     self.crawl(full_url)
-        #     except Exception as e:
-        #         print (f"Error while crawling: {e}") 
-
-        return self.recipe_links 
+        return self.class_links 
 
 
     def crawl(self, url):
@@ -44,158 +30,128 @@ class RecipeCrawler:
             if response.status_code != 200:
                 return
             
-            soup = BeautifulSoup(response.content, 'html.parser')
+            driver = webdriver.Chrome()
+            driver.get(url)
+            time.sleep(5)
 
-            for item in soup.find_all("div", {"class": "views-row"}):
-                for link in item.find_all('a', href=True):
-                    full_url = urljoin(self.base_url, link['href'])
+            html = driver.page_source
+            
+            soup = BeautifulSoup(html, 'html.parser')
+            
+            section = soup.find("body").find(id="__nuxt").find(id="__layout").find('div')
+            box = section.find(id="main-content").find('div', class_="outline-none").find('article')
+            course_list = box.find('ul').find_all('li')
 
-                    if self.is_recipe_page(full_url):
-                        if full_url in self.recipe_links:
-                            continue
-                        else:
-                            self.recipe_links.append(full_url)
-                            self.crawl(full_url)
+            # link = course_list[1].find('a', href=True)
+            # full_url = urljoin(self.base_url, link['href'])
+            # self.class_links.append(full_url)
+
+            for list in course_list:
+                link = list.find('a', href=True)
+                full_url = urljoin(self.base_url, link['href'])
+                if self.is_cs_page(full_url):
+                    if full_url in self.class_links:
+                        pass
                     else:
-                        if urlparse(full_url).netloc == urlparse(self.base_url).netloc:
-                            self.crawl(full_url)
+                        self.class_links.append(full_url)
+
+            driver.quit()    
 
         except Exception as e:
             print (f"Error while crawling {url}: {e}") 
 
-    def is_recipe_page(self, url):
+    def is_cs_page(self, url):
         response = requests.get(url)
         soup = BeautifulSoup(response.text, 'html.parser')
         
-        if 'ingredients' in soup.get_text():
+        if 'computer science' in soup.get_text():
             return True
         else:
-            return False 
+            return True 
  
 
-def save_recipe_info(url):
-    html = requests.get(url, headers={"User-Agent": f"Burger Seeker {'Mia'}"}).content
-    scraper = scrape_html(html, org_url=url)
-    title = scraper.title()
-    nutrients = scraper.nutrients()
-    ingredients = scraper.ingredients()
-    image = scraper.image()
-    instructions = scraper.instructions()
-
-    parsed_ingredients = []
-    for ingredient in ingredients:
-        temp = parse_ingredient(ingredient, string_units=True)
-        unit = None
-        amount = None
-        prep = None
-        purpose = None
-        comment = None
-
-        if temp.amount is not None:
-            try:
-                unit = temp.amount[0].unit
-                amount = temp.amount[0].quantity
-            except:
-                pass
-
-        if temp.preparation is not None:
-            prep = temp.preparation.text
-
-        if temp.preparation is not None:
-            prep = temp.preparation.text
-        
-        if temp.preparation is not None:
-            prep = temp.preparation.text
-
-        ingredient_json = {
-            'ingredient_name': temp.name.text,
-            'sentence': temp.sentence,
-            'amount': amount,
-            'unit': unit,
-            'preparation': prep,
-            'purpose': purpose,
-            'commment': comment
-        }
-        parsed_ingredients.append(ingredient_json)
+def save_class_info(url):
+    response = requests.get(url)
+    if response.status_code != 200:
+        return
     
-    parsed_instructions = instructions.splitlines()
+    driver = webdriver.Chrome()
+    driver.get(url)
+    time.sleep(5)
 
-    parsed_recipe = {
-        'title': title,
-        'nutrients': nutrients,
-        'url': url,
-        'image': image,
-        'instructions': parsed_instructions,
-        'ingredients': parsed_ingredients
+    html = driver.page_source
+    
+    soup = BeautifulSoup(html, 'html.parser')
+
+    info = soup.find('article', class_="flex-1")
+    class_code = info.find('h1').text
+    class_name = info.find_all('h2')[1].text
+    class_type = ""
+    emphasis = ""
+
+    description = ""
+    possibilities = info.find_all('div')
+    for possibility in possibilities:
+        if possibility.find('h3') is not None:
+            if possibility.find('h3').text == "Course Description":
+                description = possibility.find('div', class_='field-value').text
+
+    when_taught = ""
+    semesters = info.find_all('div')
+    for semester in semesters:
+        if semester.find('h3') is not None:
+            if semester.find('h3').text == "When Taught":
+                when_taught = semester.find('div', class_='field-value').text
+   
+    pre_req = []
+
+    divs = info.find_all("div")
+    for div in divs:
+        spans = div.find_all('span')
+        for span in spans:
+            if span.text is not None:
+                if span.text == "Complete ALL of the following Courses:":
+                    buttons = div.find_all('button')
+                    for button in buttons:
+                        if button.text is not None:
+                            pre_req.append(button.text)
+
+    driver.quit()
+
+    parsed_class = {
+        'class_name': class_name,
+        'class_code': class_code,
+        'class_type':class_type,
+        "emphasis": emphasis,
+        "pre_req":pre_req[:6],
+        "description": description,
+        "when_taught": when_taught
     }
 
-
-    return parsed_recipe
-    # if recipe_title := scraper.title():
-    #     return recipe_title
-        # if recipe_description := scraper.description():
-        #     if recipe_image := scraper.image():
-        #         if recipe_cooktime := scraper.cook_time():
-        #             if recipe_nutrients := scraper.nutrients():
-        #                 if recipe_cuisine := scraper.cuisine():
-        #                     if recipe_restrictions := scraper.dietary_restrictions():
-        #                         if recipe_equipment := scraper.equipment():
-        #                             if recipe_keywords := scraper.keywords():
-        #                                 if recipe_url := scraper.canonical_url():
-        #                                     if recipe_ingredients := scraper.ingredients():
-        #                                         parsed_ingredients = []
-        #                                         for ingredient in ingredients:
-        #                                             parsed_ingredients.append(parse_ingredient(ingredient))
-                                                
-        #                                         parsed_recipe = {
-        #                                             'title': recipe_image,
-        #                                             'description': recipe_description,
-        #                                             'image': recipe_image,
-        #                                             'cooktime': recipe_cooktime,
-        #                                             'nutrients': recipe_nutrients,
-        #                                             'cuisine': recipe_cuisine,
-        #                                             'restrictions': recipe_restrictions,
-        #                                             'equipment': recipe_equipment,
-        #                                             'keywords': recipe_keywords,
-        #                                             'url': recipe_url,
-        #                                             'ingredients': parsed_ingredients
-        #                                         }
-
-        #                                         return parsed_recipe
-    # return None
+    return parsed_class
 
 
-def save_recipes(recipes, filename='recipes.json'):
+def save_recipes(recipes, filename='classes5.json'):
     with open(filename, 'w') as f:
         json.dump(recipes, f, indent=2)       
 
 
 
 def main():
-    start_url = "https://www.myplate.gov/myplate-kitchen/recipes"
-    base_url = "https://www.myplate.gov/recipes/"
-    crawler = RecipeCrawler(base_url)
-    recipe_urls = crawler.start(start_url)
+    start_url = "https://catalog.byu.edu/courses?departments=1323&cq=&page=5"
+    base_url = "https://catalog.byu.edu/courses/01492"
 
-    recipe_list = []
-    for url in recipe_urls:
-        recipe_list.append(save_recipe_info(url))
+    crawler = ClassCrawler(base_url)
+    class_urls = crawler.start(start_url)
 
-    print(len(recipe_list))
+    print(len(class_urls))
 
-    save_recipes(recipe_list)
+    course_list = []
+    for url in class_urls:
+        course_list.append(save_class_info(url))
 
-    # print("Found recipe pages:")
-    # for recipe in recipes:
-    #     print(recipe)
+    save_recipes(course_list)
 
-    # url = "https://www.allrecipes.com/recipe/158968/spinach-and-feta-turkey-burgers/"
-    # html = requests.get(url, headers={"User-Agent": f"Burger Seeker {'Mia'}"}).content
-    # scraper = scrape_html(html, org_url=url)
-    
-    # ingredients = scraper.ingredients()
-    # for ingredient in ingredients:
-    #    print(parse_ingredient(ingredient))
 
 if __name__ == '__main__':
     main()

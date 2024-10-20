@@ -22,13 +22,13 @@ function showClassSummary() {
                 recursion, algorithms, data structures, decomposition, interpreters, 
                 and regular expressions.</p>
 
-            <div className="flex-container">
-                <h2 style={{ flex: '1' }}>Pre-Requisite Courses:</h2>
+            <div className="flex-containers">
+                <h2 style={{ flex: '2' }}>Pre-Requisite Courses:</h2>
                 <p style={{ flex: '3', margin: 0 }}>None</p>
             </div>
 
-            <div className="flex-container">
-                <h2 style={{ flex: '1' }}>When Taught:</h2>
+            <div className="flex-containers">
+                <h2 style={{ flex: '2' }}>When Taught:</h2>
                 <p style={{ flex: '3', margin: 0 }}>Fall, Winter, Spring, Summer</p>
             </div>
         </div>

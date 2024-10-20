@@ -1,0 +1,212 @@
+[
+  {
+    "class_name": "Introduction to Computer Systems",
+    "class_code": "C S 224",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [
+      "C S 235 - Data Structures and Algorithms"
+    ],
+    "description": "How a computer works to execute sequential code: low level data representation and abstraction, the relationship between C and assembly, computer architecture and pipelining, the memory hierarchy, dynamic memory allocation, and linking.\\n",
+    "when_taught": "Fall, Winter, Summer"
+  },
+  {
+    "class_name": "Introduction to Data Science",
+    "class_code": "C S 180",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [],
+    "description": "This course is a broad, interdisciplinary look at the field of data science, and how to derive insight from data.  It will develop technical skills (including some python programming, statistics, linear algebra, machine learning, data cleaning and visualization) as well as data literacy (mental frameworks for decomposing data science problems, critical thinking about potential conclusions of an analysis, and potential pitfalls of overreliance on unreliable data).",
+    "when_taught": "Winter"
+  },
+  {
+    "class_name": "Introduction to Data Science",
+    "class_code": "STAT 180",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [],
+    "description": "statistics; linear algebra; machine learning; data cleaning and visualization; data literacy; decomposing data science problems; critical thinking about analysis; potential pitfalls in data science",
+    "when_taught": "Winter"
+  },
+  {
+    "class_name": "Introduction to Deep Learning",
+    "class_code": "C S 474",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [
+      "C S 312 - Algorithm Design and Analysis",
+      "C S 270 - Introduction to Machine Learning",
+      "MATH 320 - Algorithm Design and Optimization 1"
+    ],
+    "description": "Understand theory and practice of deep learning, drawing material from machine vision, machine translation, dynamical systems, audio processing, neural computing and human perception. Learn supporting mathematical concepts, including linear algebra, stochastic optimization, and hardware acceleration.",
+    "when_taught": "Fall and Winter"
+  },
+  {
+    "class_name": "Introduction to Game Design",
+    "class_code": "CSANM 340",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [],
+    "description": "This is an introductory elective course in game design.  We will cover foundational game elements and the processes for designing game experiences. These principles are ubiquitously foundational to all parts of the video game development pipeline. This class helps students develop understanding and intuition for the techniques that make gameplay and accompanying worlds successful. \\n",
+    "when_taught": "Fall"
+  },
+  {
+    "class_name": "Introduction to Graph Data Science",
+    "class_code": "C S 575",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [
+      "C S 312 - Algorithm Design and Analysis"
+    ],
+    "description": "Use graph structures to explore labeled data and discover network relationships within the data. Understand network relationships, learn graph models of common network structures, identify network communities and influential members, and work with knowledge graphs.",
+    "when_taught": "Winter"
+  },
+  {
+    "class_name": "Introduction to Human Computer Interaction",
+    "class_code": "C S 256",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [],
+    "description": "Design user experiences with technology that make a meaningful difference in people\u2019s lives. Methods to establish user needs, derive designs, assess tradeoffs, and report results. Develop and iterate prototypes with feedback from representative users.",
+    "when_taught": "Fall and Winter"
+  },
+  {
+    "class_name": "Introduction to Machine Learning",
+    "class_code": "C S 270",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [
+      "C S 111 - Introduction to Computer Science",
+      "MATH 112 - Calculus 1"
+    ],
+    "description": "Understand the fundamental models of machine learning, such as neural networks, decision trees, data mining, clustering, Bayesian learning, ensembles, reinforcement learning, and deep learning. Work with data and machine learning tools in real world applications.",
+    "when_taught": "Fall and Winter"
+  },
+  {
+    "class_name": "Introduction to Machine Translation",
+    "class_code": "C S 479",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [
+      "C S 240 - Advanced Software Construction"
+    ],
+    "description": "Evolution of machine translation technologies and algorithms, with a foundation in basic algorithms, human-machine interaction, automatic adaptation, statistical and neural models, multilingual models, multimodal models, quality evaluation and estimation, and speech-to-speech translation.",
+    "when_taught": "Fall"
+  },
+  {
+    "class_name": "Introduction to Three-Dimensional Animation",
+    "class_code": "CSANM 252",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [
+      "CSANM 250 - Intermediate Three-Dimensional Computer Graphics"
+      ],
+    "description": "Foundational principles and techniques of three-dimensional animation, including timing and pacing,  character setup, and dynamics.",
+    "when_taught": "Winter"
+  },
+  {
+    "class_name": "Introduction to Three-Dimensional Computer Graphics",
+    "class_code": "CSANM 150",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [
+      "DESAN 101 - Introduction to Drawing for Pre-Animation"
+    ],
+    "description": "Fundamentals of modeling, texturing, lighting, and rendering used in exploring principles and elements of three-dimensional design.",
+    "when_taught": "Fall Term 1; Fall Term 2; Winter Term 1; Winter Term 2."
+  },
+  {
+    "class_name": "Job Search Strategies",
+    "class_code": "C S 502",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [],
+    "description": "Course will assist graduating students in identifying and connecting to potential employers.",
+    "when_taught": "Fall and Winter"
+  },
+  {
+    "class_name": "Large-Scale Distributed System Design",
+    "class_code": "C S 462",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [
+      "C S 324 - Systems Programming"
+    ],
+    "description": "Principles and concepts of designing and building distributed systems.  Introduction to architectures for distributed computation.  Reliability, availability, and scalability of large applications.  Cloud computing and APIs.",
+    "when_taught": "Winter"
+  },
+  {
+    "class_name": "Lighting for Three-Dimensional Graphics",
+    "class_code": "CSANM 351R",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [],
+    "description": "Developing lighting and color, and the compiling of the various elements for final images for use in three-dimensional applications.",
+    "when_taught": "Winter"
+  },
+  {
+    "class_name": "Linear Programming and Convex Optimization",
+    "class_code": "C S 412",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [
+      "MATH 213 - Elementary Linear Algebra",
+      "MATH 215 - Computational Linear Algebra"
+    ],
+    "description": "Optimization, problem formulation, and solution algorithms, including simplex and interior point methods.  Applications from control, data mining, finance, game theory, learning, network flow, operations research, and statistical estimation.",
+    "when_taught": "Contact Department"
+  },
+  {
+    "class_name": "Materials and Surfacing",
+    "class_code": "CSANM 354",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [],
+    "description": "Shading and rendering techniques for the attainment of desired visual effects:  use of shading languages for the realization of both photorealistic and non-photorealistic imaging.",
+    "when_taught": "Winter"
+  },
+  {
+    "class_name": "Mobile and Ubiquitous Human-Computer Interaction",
+    "class_code": "C S 456",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [
+      "C S 356 - Advanced Techniques in Human Computer Interaction"
+    ],
+    "description": "Iterative user experience design for mobile and ubiquitous computing with an emphasis on conceptualization and prototyping in specific contexts. Complete an open-ended project from initial design through functional prototype, with design and critique sessions.",
+    "when_taught": "Winter"
+  },
+  {
+    "class_name": "Operating Systems Design",
+    "class_code": "C S 345",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [
+      "C S 224 - Introduction to Computer Systems",
+      "C S 240 - Advanced Software Construction"
+    ],
+    "description": "Principles and concepts of operating systems design and the implementation of an operating system.",
+    "when_taught": "Contact Department"
+  },
+  {
+    "class_name": "Photography for Animation",
+    "class_code": "CSANM 355",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [],
+    "description": "Layout, references, camera technology and terminology, application of composition, lighting, and core art skills emphasized.",
+    "when_taught": "Spring Term"
+  },
+  {
+    "class_name": "Previsualization",
+    "class_code": "CSANM 353",
+    "class_type": "",
+    "emphasis": "",
+    "pre_req": [
+      "CSANM 250 - Intermediate Three-Dimensional Computer Graphics",
+      "CSANM 252 - Introduction to Three-Dimensional Animation"
+    ],
+    "description": "This class teaches the art and technical aspects of previsualization using 3D software and cameras. This technique is crucial to the modern filmmaking process, and students will learn the process through principles and experience. ",
+    "when_taught": "Winter"
+  }
+]

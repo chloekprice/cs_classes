@@ -247,11 +247,11 @@
         "class_type": "",
         "emphasis": "",
         "pre_req": [
-          "\n              C S 236 - Discrete Structures\n            ",
-          "\n              C S 260 - Web Programming\n            ",
-          "\n              C S 224 - Introduction to Computer Systems\n            ",
-          "\n              MATH 290 - Fundamentals of Mathematics\n            ",
-          "\n              C S 235 - Data Structures and Algorithms\n            "
+          "C S 236 - Discrete Structures",
+          "C S 260 - Web Programming",
+          "C S 224 - Introduction to Computer Systems",
+          "MATH 290 - Fundamentals of Mathematics",
+          "C S 235 - Data Structures and Algorithms"
         ],
         "description": "Principles and concepts characterizing high-level computer programming languages, process and data abstration, encapsulation, inheritance, functional programming, logic programming, scanners, and parsers.",
         "when_taught": "Fall and Winter"
@@ -262,11 +262,8 @@
         "class_type": "",
         "emphasis": "",
         "pre_req": [
-          "Expand All",
-          "\n                  Prerequisites\n                  \n                 ",
-          "\n      Prerequisites\n      \n     ",
-          "\n              C S 240 - Advanced Software Construction\n            ",
-          "\n              WRTG 316 - Technical Communication\n            "
+          "C S 240 - Advanced Software Construction",
+          "WRTG 316 - Technical Communication"
         ],
         "description": "Entrepreneurship, idea/opportunity generation, strategic planning, legal organization, product development, marketing/sales, customer support, fund raising, and effective management.",
         "when_taught": "Fall and Winter"
@@ -277,11 +274,8 @@
         "class_type": "",
         "emphasis": "",
         "pre_req": [
-          "Expand All",
-          "\n                  Prerequisites\n                  \n                 ",
-          "\n      Prerequisites\n      \n     ",
-          "\n              C S 240 - Advanced Software Construction\n            ",
-          "\n              C S 312 - Algorithm Design and Analysis\n            "
+          "C S 240 - Advanced Software Construction",
+          "C S 312 - Algorithm Design and Analysis"
         ],
         "description": "Culminating experience based on skills learned in advanced technical courses. Students work in teams to plan, design, implement, test, and demonstrate a major project.",
         "when_taught": "Fall"
@@ -292,10 +286,7 @@
         "class_type": "",
         "emphasis": "",
         "pre_req": [
-          "Expand All",
-          "\n                  Prerequisites\n                  \n                 ",
-          "\n      Prerequisites\n      \n     ",
-          "\n              C S 482 - Data Science Capstone 1\n            "
+          "C S 482 - Data Science Capstone 1"
         ],
         "description": "Culminating experience based on skills learned in advanced technical courses. Students work in teams to plan, design, implement, test, and demonstrate a major project.",
         "when_taught": "Winter"
@@ -306,13 +297,8 @@
         "class_type": "",
         "emphasis": "",
         "pre_req": [
-          "Expand All",
-          "\n                  Prerequisites\n                  \n                 ",
-          "\n      Prerequisites\n      \n     ",
-          "\n      Prerequisites\n      \n     ",
-          "\n              C S 142 - Introduction to Computer Programming\n            ",
-          "\n      Prerequisites\n      \n     ",
-          "\n              C S 111 - Introduction to Computer Science\n            "
+          " C S 142 - Introduction to Computer Programming",
+          "C S 111 - Introduction to Computer Science"
         ],
         "description": "Fundamental data structures and algorithms of computer science; basic algorithm analysis; recursion; sorting and searching; lists, stacks, queues, trees, hashing; object-oriented data abstraction.",
         "when_taught": "Fall, Winter, Spring"
@@ -323,10 +309,7 @@
         "class_type": "",
         "emphasis": "",
         "pre_req": [
-          "Expand All",
-          "\n                  Prerequisites\n                  \n                 ",
-          "\n      Prerequisites\n      \n     ",
-          "\n              C S 240 - Advanced Software Construction\n            "
+          "C S 240 - Advanced Software Construction"
         ],
         "description": "Database models:  relational, deductive, object-oriented.  Integrity constraints, query languages, database design.",
         "when_taught": "Fall, Winter, and Spring"
@@ -337,10 +320,7 @@
         "class_type": "",
         "emphasis": "",
         "pre_req": [
-          "Expand All",
-          "\n                  Prerequisites\n                  \n                 ",
-          "\n      Prerequisites\n      \n     ",
-          "\n              C S 235 - Data Structures and Algorithms\n            "
+          "C S 235 - Data Structures and Algorithms"
         ],
         "description": "Introduction to grammars and parsing; predicate and propositional logic; proof techniques; sets, functions, relations, relational data model; graphs and graph algorithms. ",
         "when_taught": "Fall, Winter, Spring"
@@ -351,10 +331,7 @@
         "class_type": "",
         "emphasis": "",
         "pre_req": [
-          "Expand All",
-          "\n                  Prerequisites\n                  \n                 ",
-          "\n      Prerequisites\n      \n     ",
-          "\n              C S 240 - Advanced Software Construction\n            "
+          "C S 240 - Advanced Software Construction"
         ],
         "description": "Societal impact of computer technology, the computer scientist's place in society, ethical issues.  Reading, discussion, and writing seminar.",
         "when_taught": "Fall and Winter"
@@ -397,15 +374,9 @@
         "class_type": "",
         "emphasis": "",
         "pre_req": [
-          "Expand All",
-          "\n                  Prerequisites\n                  \n                 ",
-          "\n      Prerequisites\n      \n     ",
-          "\n      Prerequisites\n      \n     ",
-          "\n              C S 240 - Advanced Software Construction\n            ",
-          "\n      Prerequisites\n      \n     ",
-          "\n              C S 240 - Advanced Software Construction\n            ",
-          "\n              MATH 213 - Elementary Linear Algebra\n            ",
-          "\n              MATH 215 - Computational Linear Algebra\n            "
+          "C S 240 - Advanced Software Construction",
+          "MATH 213 - Elementary Linear Algebra",
+          "MATH 215 - Computational Linear Algebra"
         ],
         "description": "Introduces basic concepts of computer graphics and image processing. Includes characteristics of physical cameras and displays; color models; basic image processing algorithms: 2D and 3D homogeneous coordinate transformations; fundamentals of 3D rendering geometry; lighting and shading: image warping and texture mapping; and frequency-domain processing.",
         "when_taught": "Fall"
@@ -425,13 +396,9 @@
         "class_type": "",
         "emphasis": "",
         "pre_req": [
-          "Expand All",
-          "\n                  Prerequisites\n                  \n                 ",
-          "\n      Prerequisites\n      \n     ",
-          "\n      Prerequisites\n      \n     ",
-          "\n              C S 312 - Algorithm Design and Analysis\n            ",
-          "\n              MATH 215 - Computational Linear Algebra\n            ",
-          "\n              STAT 121 - Introduction to Statistical Data Analysis\n            "
+          "C S 312 - Algorithm Design and Analysis",
+          "MATH 215 - Computational Linear Algebra",
+          "STAT 121 - Introduction to Statistical Data Analysis"
         ],
         "description": "Introduction to core areas of artifical intelligence; intelligent agents, problem solving and search, knowledge-based systems and inference, planning, uncertainty, learning, and perception. ",
         "when_taught": "Fall, Winter, and Spring"

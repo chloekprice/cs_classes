@@ -1,17 +1,10 @@
 import './App.css';
 import displayClass from './ClassInfoDisplay';
 import React, { useState } from 'react';
-import Tabs from './Tabs';
 import Sidebar from './Sidebar';
+import displayHeader from './CSWebsiteHeader';
 
 function App() {
-
-  const tabData = [
-    { label: "Classes" },
-    { label: "About the major" },
-    { label: "Objectives" },
-    { label: "Outcomes"}
-  ];
 
   const [selectedOption, setSelectedOption] = useState(null);
   const [selectedValue, setSelectedValue] = useState('');
@@ -27,7 +20,7 @@ function App() {
   return (
     <div className="Site">
       <div className="navbar">
-        <Tabs tabs={tabData} />
+        {displayHeader()}
       </div>
       
       <div className="content">

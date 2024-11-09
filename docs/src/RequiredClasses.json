@@ -1,129 +1,118 @@
 [
-      {
-        "class_name": "Advanced Software Construction",
-        "class_code": "C S 240",
-        "class_type": "",
-        "emphasis": "",
-        "pre_req": [ "C S 235 - Data Structures and Algorithms"
-        ],
-        "description": "Advanced software development with an object-oriented focus. Design, implementation, and testing of medium-sized programs including a server program.",
-        "when_taught": "All Semesters/Terms"
-      },
-      {
-        "class_name": "Algorithm Design and Analysis",
-        "class_code": "C S 312",
-        "class_type": "",
-        "emphasis": "",
-        "pre_req": [
-          "C S 236 - Discrete Structures"
-        ],
-        "description": "A study of the design and analysis of algorithms as solutions to problems, including dynamic programming, linear programming, greedy algorithms, divide-and-conquer algorithms, graph algorithms, and intelligent search algorithms.",
-        "when_taught": "Fall and Winter"
-      },
-        {
-          "class_name": "Data Structures and Algorithms",
-          "class_code": "C S 235",
-          "class_type": "",
-          "emphasis": "",
-          "pre_req": [
-            "C S 142 - Introduction to Computer Programming",
-            "C S 111 - Introduction to Computer Science"
-          ],
-          "description": "Fundamental data structures and algorithms of computer science; basic algorithm analysis; recursion; sorting and searching; lists, stacks, queues, trees, hashing; object-oriented data abstraction.",
-          "when_taught": "Fall, Winter, Spring"
-        },
-        {
-          "class_name": "Discrete Structures",
-          "class_code": "C S 236",
-          "class_type": "",
-          "emphasis": "",
-          "pre_req": [
-            "C S 235 - Data Structures and Algorithms"
-          ],
-          "description": "Introduction to grammars and parsing; predicate and propositional logic; proof techniques; sets, functions, relations, relational data model; graphs and graph algorithms. ",
-          "when_taught": "Fall, Winter, Spring"
-        },
-        {
-          "class_name": "Ethics and Computers in Society",
-          "class_code": "C S 404",
-          "class_type": "",
-          "emphasis": "",
-          "pre_req": [
-            "C S 240 - Advanced Software Construction"
-          ],
-          "description": "Societal impact of computer technology, the computer scientist's place in society, ethical issues.  Reading, discussion, and writing seminar.",
-          "when_taught": "Fall and Winter"
-        },
-        {
-          "class_name": "Introduction to Computational Theory",
-          "class_code": "C S 252",
-          "class_type": "",
-          "emphasis": "",
-          "pre_req": [],
-          "description": "Finite state automata, regular languages, lexical analysis; push-down automata, context-free languages, parsing; Turing machines and unrestricted grammars; computability complexity, NP-completeness.",
-          "when_taught": "Fall and Winter"
-        },
-        {
-          "class_name": "Introduction to Computer Science",
-          "class_code": "C S 111",
-          "class_type": "",
-          "emphasis": "",
-          "pre_req": [],
-          "description": "Teaches how to design, develop, reason about, and test programs. Topics include higher-order functions, object-oriented programming, recursion, algorithms, data structures, decomposition, interpreters, and regular expressions.",
-          "when_taught": "All Semesters/Terms"
-        },
-        {
-          "class_name": "Introduction to Computer Systems",
-          "class_code": "C S 224",
-          "class_type": "",
-          "emphasis": "",
-          "pre_req": [
-            "C S 235 - Data Structures and Algorithms"
-          ],
-          "description": "How a computer works to execute sequential code: low level data representation and abstraction, the relationship between C and assembly, computer architecture and pipelining, the memory hierarchy, dynamic memory allocation, and linking.\\n",
-          "when_taught": "Fall, Winter, Summer"
-        },
-        {
-          "class_name": "Software Design",
-          "class_code": "C S 340",
-          "class_type": "",
-          "emphasis": "",
-          "pre_req": [
-            "C S 240 - Advanced Software Construction",
-            "C S 260 - Web Programming"
-          ],
-          "description": "Use design, development, testing and refactoring techniques to build and evolve reliable, maintainable and scalable software systems. Covers a wide range of design patterns and principles. Also introduces students to software architecture and architectural patterns.",
-          "when_taught": "Fall and Winter"
-        },
-        {
-          "class_name": "Software Engineering",
-          "class_code": "C S 428",
-          "class_type": "",
-          "emphasis": "",
-          "pre_req": [
-            "C S 340 - Software Design"
-          ],
-          "description": "Analysis, design, implementation, and testing of significant software systems.",
-          "when_taught": "Contact Department"
-        },
-        {
-          "class_name": "Systems Programming",
-          "class_code": "C S 324",
-          "class_type": "",
-          "emphasis": "",
-          "pre_req": [
-            "C S 224 - Introduction to Computer Systems"
-          ],
-          "description": "Systems programming principles and concepts, including Linux systems programming, multiprocessing, concurrency, exceptional control flow, caching, sockets, protocols, and non-blocking I/O.",
-          "when_taught": "Fall and Winter"
-        },
-        {
-          "class_name": "Web Programming",
-          "class_code": "C S 260",
-          "class_type": "",
-          "emphasis": "",
-          "pre_req": [],
-          "description": "Introduction to web application design and implementation. Both front end and back end development with an emphasis on REST architectures.",
-          "when_taught": "Fall and Winter"
-        }   
+    {
+      "class_name": "Introduction to Computer Science",
+      "class_code": "C S 111",
+      "class_type": "",
+      "emphasis": "",
+      "pre_req": [],
+      "description": "Teaches how to design, develop, reason about, and test programs. Topics include higher-order functions, object-oriented programming, recursion, algorithms, data structures, decomposition, interpreters, and regular expressions.",
+      "when_taught": "All Semesters/Terms"
+    },
+    {
+      "class_name": "Introduction to Computer Systems",
+      "class_code": "C S 224",
+      "class_type": "",
+      "emphasis": "",
+      "pre_req": [
+        "C S 235 - Data Structures and Algorithms"
+      ],
+      "description": "How a computer works to execute sequential code: low level data representation and abstraction, the relationship between C and assembly, computer architecture and pipelining, the memory hierarchy, dynamic memory allocation, and linking.\\n",
+      "when_taught": "Fall, Winter, Summer"
+    },
+    {
+      "class_name": "Data Structures and Algorithms",
+      "class_code": "C S 235",
+      "class_type": "",
+      "emphasis": "",
+      "pre_req": [
+        "C S 142 - Introduction to Computer Programming",
+        "C S 111 - Introduction to Computer Science"
+      ],
+      "description": "Fundamental data structures and algorithms of computer science; basic algorithm analysis; recursion; sorting and searching; lists, stacks, queues, trees, hashing; object-oriented data abstraction.",
+      "when_taught": "Fall, Winter, Spring"
+    },
+    {
+      "class_name": "Discrete Structures",
+      "class_code": "C S 236",
+      "class_type": "",
+      "emphasis": "",
+      "pre_req": [
+        "C S 235 - Data Structures and Algorithms"
+      ],
+      "description": "Introduction to grammars and parsing; predicate and propositional logic; proof techniques; sets, functions, relations, relational data model; graphs and graph algorithms. ",
+      "when_taught": "Fall, Winter, Spring"
+    },
+    {
+      "class_name": "Advanced Software Construction",
+      "class_code": "C S 240",
+      "class_type": "",
+      "emphasis": "",
+      "pre_req": [ "C S 235 - Data Structures and Algorithms"
+      ],
+      "description": "Advanced software development with an object-oriented focus. Design, implementation, and testing of medium-sized programs including a server program.",
+      "when_taught": "All Semesters/Terms"
+    },
+    {
+      "class_name": "Introduction to Computational Theory",
+      "class_code": "C S 252",
+      "class_type": "",
+      "emphasis": "",
+      "pre_req": [],
+      "description": "Finite state automata, regular languages, lexical analysis; push-down automata, context-free languages, parsing; Turing machines and unrestricted grammars; computability complexity, NP-completeness.",
+      "when_taught": "Fall and Winter"
+    },
+    {
+      "class_name": "Web Programming",
+      "class_code": "C S 260",
+      "class_type": "",
+      "emphasis": "",
+      "pre_req": [],
+      "description": "Introduction to web application design and implementation. Both front end and back end development with an emphasis on REST architectures.",
+      "when_taught": "Fall and Winter"
+    },
+    {
+      "class_name": "Algorithm Design and Analysis",
+      "class_code": "C S 312",
+      "class_type": "",
+      "emphasis": "",
+      "pre_req": [
+        "C S 236 - Discrete Structures"
+      ],
+      "description": "A study of the design and analysis of algorithms as solutions to problems, including dynamic programming, linear programming, greedy algorithms, divide-and-conquer algorithms, graph algorithms, and intelligent search algorithms.",
+      "when_taught": "Fall and Winter"
+    },
+    {
+      "class_name": "Systems Programming",
+      "class_code": "C S 324",
+      "class_type": "",
+      "emphasis": "",
+      "pre_req": [
+        "C S 224 - Introduction to Computer Systems"
+      ],
+      "description": "Systems programming principles and concepts, including Linux systems programming, multiprocessing, concurrency, exceptional control flow, caching, sockets, protocols, and non-blocking I/O.",
+      "when_taught": "Fall and Winter"
+    },
+    {
+      "class_name": "Software Design",
+      "class_code": "C S 340",
+      "class_type": "",
+      "emphasis": "",
+      "pre_req": [
+        "C S 240 - Advanced Software Construction",
+        "C S 260 - Web Programming"
+      ],
+      "description": "Use design, development, testing and refactoring techniques to build and evolve reliable, maintainable and scalable software systems. Covers a wide range of design patterns and principles. Also introduces students to software architecture and architectural patterns.",
+      "when_taught": "Fall and Winter"
+    },
+    {
+      "class_name": "Ethics and Computers in Society",
+      "class_code": "C S 404",
+      "class_type": "",
+      "emphasis": "",
+      "pre_req": [
+        "C S 240 - Advanced Software Construction"
+      ],
+      "description": "Societal impact of computer technology, the computer scientist's place in society, ethical issues.  Reading, discussion, and writing seminar.",
+      "when_taught": "Fall and Winter"
+    }  
 ]

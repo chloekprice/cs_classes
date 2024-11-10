@@ -25,10 +25,10 @@ function App() {
       
       <div className="content">
         <div className="sidebar">
-          <Sidebar onOptionSelect={handleOptionSelect} onValueSelect={handleValueSelect}/>
+          <Sidebar onOptionSelect={handleOptionSelect}/>
         </div>
         <div className="main-content">
-          {displayClass(selectedOption)}
+          {displayClass(selectedOption.value)}
         </div>
       </div>
     </div>

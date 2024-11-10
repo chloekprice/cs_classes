@@ -7,15 +7,10 @@ import displayHeader from './CSWebsiteHeader';
 function App() {
   const options1 = initialize_required_classes();
   const [selectedOption, setSelectedOption] = useState(options1[0]);
-  // const [selectedValue, setSelectedValue] = useState('');
-
+  
   const handleOptionSelect = (option) => {
     setSelectedOption(option);
   };
-
-  // const handleValueSelect = (value) => {
-  //   setSelectedValue(value);
-  // };
 
   return (
     <div className="Site">

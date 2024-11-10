@@ -28,7 +28,7 @@ function App() {
           <Sidebar onOptionSelect={handleOptionSelect}/>
         </div>
         <div className="main-content">
-          {displayClass(selectedOption.value)}
+          {selectedOption ? displayClass(selectedOption.value) : <p>Select a class to display details</p>}
         </div>
       </div>
     </div>

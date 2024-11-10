@@ -95,10 +95,17 @@ div.parent-footer {
   text-align: center;
 }
 
-div.sibling {
+div.sibling-header {
   display: inline-block;
   vertical-align: left;
   margin-right: 5px;
+}
+
+div.sibling-footer {
+  display: inline-flex;
+  vertical-align: left;
+  margin-right: 5px;
+  width: 500px;
 }
 
 h1.class-name {
@@ -121,6 +128,25 @@ div.class-actions {
 
 div.class-prerequisites {
   margin-right: 100px;
+}
+
+div.hover-class {
+  background-color: #002e5d;
+  color: #ffffff;
+  padding: 7px;
+  border-radius: 10px;
+}
+
+h1.hover-class-name {
+  font-size: 20px;
+}
+
+p.hover-class-description {
+  color: #ffffff;
+}
+
+h2.hover-class-prereqs {
+  font-size: 15px;
 }
 
 div.class-next-classes {

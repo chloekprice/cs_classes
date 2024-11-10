@@ -164,7 +164,16 @@ function showClassSummary(info_class) {
         "emphasis": "",
         "pre_req": [],
         "description": "Teaches how to design, develop, reason about, and test programs. Topics include higher-order functions, object-oriented programming, recursion, algorithms, data structures, decomposition, interpreters, and regular expressions.",
-        "when_taught": "All Semesters/Terms"
+        "when_taught": "All Semesters/Terms",
+        "next_classes": [
+            "CS 235 - Data Structures",
+            "CS 224 - Introduction to Computer Systems",
+            "CS 236 - Discrete Structures",
+            "CS 256 - Introduction to HCI",
+            "CS 260 - Web Programming",
+            "CS 240 - Advanced Programming",
+            "CS 270 - Introduction to Machine Learning"
+          ]
     }
     const info = require('./CSClasses.json');
 
@@ -175,6 +184,7 @@ function showClassSummary(info_class) {
             class_info['description'] = info[i]['description']
             class_info['pre_req'] = info[i]['pre_req']
             class_info['when_taught'] = info[i]['when_taught']
+            class_info['next_classes'] = info[i]['next_classes']
         }
     }
     
@@ -184,10 +194,10 @@ function showClassSummary(info_class) {
             <div className="class-info-header">
                 <p className="class-code">{class_info.class_code}</p>
                 <div className="parent-header">
-                    <div className="sibling">
+                    <div className="sibling-header">
                         <h1 className="class-name">{class_info.class_name}</h1>
                     </div>
-                    <div className='sibling'>
+                    <div className='sibling-header'>
                         {showWhenOffered(class_info.when_taught)}
                     </div>
                 </div>
@@ -225,12 +235,22 @@ function showClassHover(class_hover) {
             class_info['description'] = info[i]['description']
             class_info['pre_req'] = info[i]['pre_req']
             class_info['when_taught'] = info[i]['when_taught']
+            class_info['next_classes'] = info[i]['next_classes']
         }
     }
 
     return (
         <div>
-            <h1 className="hover-class-name">{class_info.class_code}: {class_info.class_name}</h1>
+            <div className="hover-class">
+                <h1 className="hover-class-name">{class_info.class_code}: {class_info.class_name}</h1>
+                <p className="hover-class-description">{class_info.description}</p>
+                <h2 className="hover-class-prereqs">Prerequisites:</h2>
+                <ul>
+                    {class_info.pre_req.map((prereq, index) => (
+                        <li key={index}>{prereq}</li>
+                    ))}
+                </ul> 
+            </div>
         </div>
     );
 }
@@ -254,10 +274,20 @@ function ShowPrerequisites(prereqs) {
     );
 }
 
-function showPotentialTracks(info_class) {
+function ShowPotentialTracks(next_classes) {
+    const [showNext, setNext] = useState("");
+
     return (
         <div>
-            <h1>Similar Classes</h1>
+            <h1 className="next-classes">Similar Classes</h1>
+            <ul>
+                {next_classes.map((next_class, index) => (
+                    <li onMouseEnter={() => setNext(next_class)} onMouseLeave={() => setNext("")}  key={index}>{next_class}</li>
+                ))}
+            </ul>  
+            <div>
+               {showClassHover(showNext)}
+            </div>
         </div>
     );
 }
@@ -265,18 +295,17 @@ function showPotentialTracks(info_class) {
 function showClassActions(class_info) {
     return (
         <div>
-            <div className="parent-footer">
-                <div className="sibling">
+                <div className="sibling-footer">
                     <div className="class-prerequisites">
                         {ShowPrerequisites(class_info.pre_req)}
                     </div>
                 </div>
-                <div className="sibling">
+                <div className="sibling-footer">
                     <div className="class-next-classes">
-                        {showPotentialTracks(class_info)}
+                        {ShowPotentialTracks(class_info.next_classes)}
                     </div>
                 </div>
-            </div>
+          
         </div>
     );
 }

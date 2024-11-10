@@ -5,17 +5,17 @@ import Sidebar from './Sidebar';
 import displayHeader from './CSWebsiteHeader';
 
 function App() {
-
-  const [selectedOption, setSelectedOption] = useState(null);
-  const [selectedValue, setSelectedValue] = useState('');
+  const options1 = initialize_required_classes();
+  const [selectedOption, setSelectedOption] = useState(options1[0]);
+  // const [selectedValue, setSelectedValue] = useState('');
 
   const handleOptionSelect = (option) => {
     setSelectedOption(option);
   };
 
-  const handleValueSelect = (value) => {
-    setSelectedValue(value);
-  };
+  // const handleValueSelect = (value) => {
+  //   setSelectedValue(value);
+  // };
 
   return (
     <div className="Site">
@@ -33,6 +33,19 @@ function App() {
       </div>
     </div>
   );
+}
+
+function initialize_required_classes() {
+  var classes = [];
+  const info = require('./RequiredClasses.json');
+
+      for(let i = 0; i < info.length; i++) {
+          classes.push(
+              { value: info[i]['class_code'], label: `${info[i]['class_code']}: ${info[i]['class_name']}`},
+          );
+      }
+  
+      return classes;
 }
 
 export default App;

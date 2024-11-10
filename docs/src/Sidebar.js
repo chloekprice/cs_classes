@@ -2,10 +2,10 @@ import './Sidebar.css';
 import React, { useState } from 'react';
 
 const Sidebar = ({ onOptionSelect }) => {
-    const [selectedOption, setSelectedOption] = useState(null);
-    
     const options1 = initialize_required_classes();
     const options2 = initialize_elective_classes();
+
+    const [selectedOption, setSelectedOption] = useState(options1[0]);
 
     const handleOptionSelect = (option) => {
         setSelectedOption(option.value);

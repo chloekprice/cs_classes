@@ -74,6 +74,58 @@ p {
   overflow-y: auto;
 }
 
+div.class-info-header {
+  line-height: 1.1;
+}
+
+p.class-code {
+  color:  #002e5d;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  word-spacing: 0%;
+  margin-bottom: 0;
+}
+
+div.parent-header {
+  text-align: left;
+}
+
+div.parent-footer {
+  text-align: center;
+}
+
+div.sibling {
+  display: inline-block;
+  vertical-align: left;
+  margin-right: 5px;
+}
+
+h1.class-name {
+  color:  #002e5d;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+p.class-description {
+  color:  #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+div.class-actions {
+  vertical-align: middle;
+}
+
+div.class-prerequisites {
+  margin-right: 100px;
+}
+
+div.class-next-classes {
+  margin-left: 100px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

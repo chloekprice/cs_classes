@@ -5,16 +5,11 @@ import Sidebar from './Sidebar';
 import displayHeader from './CSWebsiteHeader';
 
 function App() {
-
-  const [selectedOption, setSelectedOption] = useState(null);
-  const [selectedValue, setSelectedValue] = useState('');
-
+  const options1 = initialize_required_classes();
+  const [selectedOption, setSelectedOption] = useState(options1[0]);
+  
   const handleOptionSelect = (option) => {
     setSelectedOption(option);
-  };
-
-  const handleValueSelect = (value) => {
-    setSelectedValue(value);
   };
 
   return (
@@ -25,14 +20,27 @@ function App() {
       
       <div className="content">
         <div className="sidebar">
-          <Sidebar onOptionSelect={handleOptionSelect} onValueSelect={handleValueSelect}/>
+          <Sidebar onOptionSelect={handleOptionSelect}/>
         </div>
         <div className="main-content">
-          {displayClass(selectedOption)}
+          {selectedOption ? displayClass(selectedOption.value) : <p>Select a class to display details</p>}
         </div>
       </div>
     </div>
   );
+}
+
+function initialize_required_classes() {
+  var classes = [];
+  const info = require('./RequiredClasses.json');
+
+      for(let i = 0; i < info.length; i++) {
+          classes.push(
+              { value: info[i]['class_code'], label: `${info[i]['class_code']}: ${info[i]['class_name']}`},
+          );
+      }
+  
+      return classes;
 }
 
 export default App;

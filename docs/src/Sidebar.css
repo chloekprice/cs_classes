@@ -1,0 +1,27 @@
+.sidebar {
+    padding: 20px;
+    width: 250px;
+    background-color: #f4f4f4;
+}
+
+.class-list {
+    margin-bottom: 20px;
+}
+
+.class-item {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #e0e0e0;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.class-item:hover {
+    background-color: #d0d0d0;
+}
+
+.class-item.selected {
+    background-color: #b0c4de;
+    font-weight: bold;
+}
+

@@ -29,7 +29,7 @@ const Sidebar = ({ onOptionSelect }) => {
         <div className="sidebar">
             <div className="dropdown">
                 <h3 onClick={toggleRequiredVisibility} className="dropdown-header">
-                    Required Classes { isRequiredVisible ? <BsChevronUp/> : <BsChevronDown/> }
+                    Required Classes { isRequiredVisible ? <BsChevronUp className="chevron-icon"/> : <BsChevronDown className="chevron-icon"/> }
                 </h3>
                 {isRequiredVisible && (
                     <div className="class-list">
@@ -48,7 +48,7 @@ const Sidebar = ({ onOptionSelect }) => {
 
             <div className="dropdown">
                 <h3 onClick={toggleElectiveVisibility} className="dropdown-header">
-                    Elective Classes { isElectiveVisible ? <BsChevronUp/> : <BsChevronDown/> }
+                    Elective Classes { isElectiveVisible ? <BsChevronUp className="chevron-icon"/> : <BsChevronDown className="chevron-icon"/> }
                 </h3>
                 {isElectiveVisible && (
                     <div className="class-list">

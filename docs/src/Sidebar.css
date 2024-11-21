@@ -102,14 +102,8 @@
     margin-left: auto;
 }
 
-.class-item:hover {
+.class-item:hover, .class-item-elective:hover {
     background-color: #d0d0d0;
-}
-
-.class-item.selected {
-    background-color: #b0c4de;
-    color: #192e5a;
-    font-weight: bold;
 }
 
 .class-item.selected, .class-item-elective.selected {

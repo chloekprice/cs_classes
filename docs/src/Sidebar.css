@@ -1,7 +1,21 @@
+.content {
+    display: flex;
+}
+
 .sidebar {
-    padding: 20px;
+    position: relative;
     width: 250px;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px;
     background-color: #f4f4f4;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
 }
 
 .class-list {
@@ -23,5 +37,9 @@
 .class-item.selected {
     background-color: #b0c4de;
     font-weight: bold;
+}
+
+.dropdown-header {
+    padding-bottom: 20px;
 }
 

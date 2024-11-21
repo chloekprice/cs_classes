@@ -1,5 +1,13 @@
+.Site {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
 .content {
     display: flex;
+    overflow: hidden;
+    flex: 1;
 }
 
 .sidebar {

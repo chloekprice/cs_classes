@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'; 
+import './ClassInfoDisplay.css';
 
 function displayClass(info_class) {
     return(
@@ -262,7 +263,7 @@ function ShowPrerequisites(prereqs) {
     return (
         <div>
             <h1 className="prereqs">Prerequisites</h1>
-            <ul>
+            <ul class="custom-list">
                 {prereqs.map((prereq, index) => (
                     <li onMouseEnter={() => setClass(prereq)} onMouseLeave={() => setClass("")}  key={index}>{prereq}</li>
                 ))}
@@ -280,7 +281,7 @@ function ShowPotentialTracks(next_classes) {
     return (
         <div>
             <h1 className="next-classes">Similar Classes</h1>
-            <ul>
+            <ul class="custom-list">
                 {next_classes.map((next_class, index) => (
                     <li onMouseEnter={() => setNext(next_class)} onMouseLeave={() => setNext("")}  key={index}>{next_class}</li>
                 ))}

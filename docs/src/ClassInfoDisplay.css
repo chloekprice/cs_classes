@@ -1,0 +1,9 @@
+.custom-list {
+    list-style-type: none;  
+    padding-left: 0; 
+    text-decoration: underline;       
+  }
+  
+  .custom-list li {
+    text-decoration: underline;  
+  }

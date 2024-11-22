@@ -5,10 +5,10 @@ function displayClass(info_class) {
     return(
         <div>
             <div>
-                {showClassSummary(info_class)}
+                {ShowClassSummary(info_class)}
             </div>
         </div>
-    );
+    )
 }
 
 function showWhenOffered(offeredSemesters) {
@@ -157,7 +157,7 @@ function showWhenOffered(offeredSemesters) {
 }
 
 
-function showClassSummary(info_class) {
+function ShowClassSummary(info_class) {
     var class_info =  {
         "class_name": "Introduction to Computer Science",
         "class_code": "C S 111",
@@ -167,148 +167,159 @@ function showClassSummary(info_class) {
         "description": "Teaches how to design, develop, reason about, and test programs. Topics include higher-order functions, object-oriented programming, recursion, algorithms, data structures, decomposition, interpreters, and regular expressions.",
         "when_taught": "All Semesters/Terms",
         "next_classes": [
-            "CS 235 - Data Structures",
-            "CS 224 - Introduction to Computer Systems",
-            "CS 236 - Discrete Structures",
-            "CS 256 - Introduction to HCI",
-            "CS 260 - Web Programming",
-            "CS 240 - Advanced Programming",
-            "CS 270 - Introduction to Machine Learning"
+            "C S 235 - Data Structures",
+            "C S 224 - Introduction to Computer Systems",
+            "C S 236 - Discrete Structures",
+            "C S 256 - Introduction to HCI",
+            "C S 260 - Web Programming",
+            "C S 240 - Advanced Programming",
+            "C S 270 - Introduction to Machine Learning"
           ]
     }
-    const info = require('./CSClasses.json');
+    
 
-    for(let i = 0; i < info.length; i++) {
-        if (info[i]['class_code'] === info_class) {
-            class_info['class_name'] = info[i]['class_name']
-            class_info['class_code'] = info[i]['class_code']
-            class_info['description'] = info[i]['description']
-            class_info['pre_req'] = info[i]['pre_req']
-            class_info['when_taught'] = info[i]['when_taught']
-            class_info['next_classes'] = info[i]['next_classes']
+    const [selectedClassOption, setSelectedClassOption] = useState(null);
+  
+    const handleClassOptionSelect = (class_option) => {
+        setSelectedClassOption(class_option);
+    };
+
+    function setNewClassOption(class_option) {
+        const info = require('./CSClasses.json');
+        for(let i = 0; i < info.length; i++) {
+            if (info[i]['class_code'] === class_option) {
+                class_info['class_name'] = info[i]['class_name']
+                class_info['class_code'] = info[i]['class_code']
+                class_info['description'] = info[i]['description']
+                class_info['pre_req'] = info[i]['pre_req']
+                class_info['when_taught'] = info[i]['when_taught']
+                class_info['next_classes'] = info[i]['next_classes']
+            }
         }
     }
+
+    setNewClassOption(info_class)
+
+    function showClassHover(class_hover) {
+        if (class_hover === "") {
+            return (
+                <div></div>
+            );
+        }
+        var class_info =  {
+            "class_name": "",
+            "class_code": "",
+            "class_type": "",
+            "emphasis": "",
+            "pre_req": [],
+            "description": "",
+            "when_taught": ""
+        }
+        const info = require('./CSClasses.json');
     
-        
-    return (
-        <div>
-            <div className="class-info-header">
-                <p className="class-code">{class_info.class_code}</p>
-                <div className="parent-header">
-                    <div className="sibling-header">
-                        <h1 className="class-name">{class_info.class_name}</h1>
-                    </div>
-                    <div className='sibling-header'>
-                        {showWhenOffered(class_info.when_taught)}
-                    </div>
-                </div>
-                <p className="class-description">{class_info.description}</p>
-            </div>
-            <div className="class-actions">
-                {showClassActions(class_info)}
-            </div>
-        </div>
-    );
-}
-
-
-function showClassHover(class_hover) {
-    if (class_hover === "") {
+        for(let i = 0; i < info.length; i++) {
+            if (class_hover.includes(info[i]['class_code'])) {
+                class_info['class_name'] = info[i]['class_name']
+                class_info['class_code'] = info[i]['class_code']
+                class_info['description'] = info[i]['description']
+                class_info['pre_req'] = info[i]['pre_req']
+                class_info['when_taught'] = info[i]['when_taught']
+                class_info['next_classes'] = info[i]['next_classes']
+            }
+        }
+    
         return (
-            <div></div>
+            <div>
+                <div className="hover-class">
+                    <h1 className="hover-class-name">{class_info.class_code}: {class_info.class_name}</h1>
+                    <p className="hover-class-description">{class_info.description}</p>
+                    <h2 className="hover-class-prereqs">Prerequisites:</h2>
+                    <ul>
+                        {class_info.pre_req.map((prereq, index) => (
+                            <li key={index}>{prereq}</li>
+                        ))}
+                    </ul> 
+                </div>
+            </div>
         );
     }
-    var class_info =  {
-        "class_name": "",
-        "class_code": "",
-        "class_type": "",
-        "emphasis": "",
-        "pre_req": [],
-        "description": "",
-        "when_taught": ""
-    }
-    const info = require('./CSClasses.json');
-
-    for(let i = 0; i < info.length; i++) {
-        if (class_hover.includes(info[i]['class_code'])) {
-            class_info['class_name'] = info[i]['class_name']
-            class_info['class_code'] = info[i]['class_code']
-            class_info['description'] = info[i]['description']
-            class_info['pre_req'] = info[i]['pre_req']
-            class_info['when_taught'] = info[i]['when_taught']
-            class_info['next_classes'] = info[i]['next_classes']
-        }
-    }
-
-    return (
-        <div>
-            <div className="hover-class">
-                <h1 className="hover-class-name">{class_info.class_code}: {class_info.class_name}</h1>
-                <p className="hover-class-description">{class_info.description}</p>
-                <h2 className="hover-class-prereqs">Prerequisites:</h2>
-                <ul>
-                    {class_info.pre_req.map((prereq, index) => (
-                        <li key={index}>{prereq}</li>
+    
+    
+    function ShowPrerequisites(prereqs) {
+        const [showClass, setClass] = useState("");
+    
+        return (
+            <div>
+                <h1 className="prereqs">Prerequisites</h1>
+                <ul class="custom-list">
+                    {prereqs.map((prereq, index) => (
+                        <li   onClick={() => setSelectedClassOption(prereq.substring(4,6))} onMouseEnter={() => setClass(prereq)} onMouseLeave={() => setClass("")}  key={index}>{prereq}</li>
                     ))}
-                </ul> 
-            </div>
-        </div>
-    );
-}
-
-
-function ShowPrerequisites(prereqs) {
-    const [showClass, setClass] = useState("");
-
-    return (
-        <div>
-            <h1 className="prereqs">Prerequisites</h1>
-            <ul class="custom-list">
-                {prereqs.map((prereq, index) => (
-                    <li onMouseEnter={() => setClass(prereq)} onMouseLeave={() => setClass("")}  key={index}>{prereq}</li>
-                ))}
-            </ul>  
-            <div>
-               {showClassHover(showClass)}
-            </div>
-        </div>
-    );
-}
-
-function ShowPotentialTracks(next_classes) {
-    const [showNext, setNext] = useState("");
-
-    return (
-        <div>
-            <h1 className="next-classes">Similar Classes</h1>
-            <ul class="custom-list">
-                {next_classes.map((next_class, index) => (
-                    <li onMouseEnter={() => setNext(next_class)} onMouseLeave={() => setNext("")}  key={index}>{next_class}</li>
-                ))}
-            </ul>  
-            <div>
-               {showClassHover(showNext)}
-            </div>
-        </div>
-    );
-}
-
-function showClassActions(class_info) {
-    return (
-        <div>
-                <div className="sibling-footer">
-                    <div className="class-prerequisites">
-                        {ShowPrerequisites(class_info.pre_req)}
-                    </div>
+                </ul>  
+                <div>
+                   {showClassHover(showClass)}
                 </div>
-                <div className="sibling-footer">
-                    <div className="class-next-classes">
-                        {ShowPotentialTracks(class_info.next_classes)}
-                    </div>
+            </div>
+        );
+    }
+    
+    function ShowPotentialTracks(next_classes) {
+        const [showNext, setNext] = useState("");
+    
+        return (
+            <div>
+                <h1 className="next-classes">Similar Classes</h1>
+                <ul class="custom-list">
+                    {next_classes.map((next_class, index) => (
+                        <li   onClick={() => setSelectedClassOption(next_class.substring(4,6))} onMouseEnter={() => setNext(next_class)} onMouseLeave={() => setNext("")}  key={index}>{next_class}</li>
+                    ))}
+                </ul>  
+                <div>
+                   {showClassHover(showNext)}
                 </div>
-          
-        </div>
-    );
+            </div>
+        );
+    }
+    
+    function showClassActions(class_info) {
+        return (
+            <div>
+                    <div className="sibling-footer">
+                        <div className="class-prerequisites">
+                            {ShowPrerequisites(class_info.pre_req)}
+                        </div>
+                    </div>
+                    <div className="sibling-footer">
+                        <div className="class-next-classes">
+                            {ShowPotentialTracks(class_info.next_classes)}
+                        </div>
+                    </div>
+              
+            </div>
+        );
+    } 
+    
+        return (
+            <div>
+                <div className="class-info-header">
+                    <p className="class-code">{class_info.class_code}</p>
+                    <div className="parent-header">
+                        <div className="sibling-header">
+                            <h1 className="class-name">{class_info.class_name}</h1>
+                        </div>
+                        <div className='sibling-header'>
+                            {showWhenOffered(class_info.when_taught)}
+                        </div>
+                    </div>
+                    <p className="class-description">{class_info.description}</p>
+                </div>
+                <div className="class-actions">
+                    {showClassActions(class_info)}
+                </div>
+            </div>
+        );
+    
 }
+
 
 export default displayClass;

@@ -114,10 +114,10 @@ function groupElectiveClassesByLevel(classes) {
     let level = '';
 
     classes.forEach((cls) => {
-        if (cls.value.charAt(4) == 'M') {
+        if (cls.value.charAt(4) === 'M') {
             level = 'CSANM';
         }
-        else if (cls.value.charAt(0) == 'S') {
+        else if (cls.value.charAt(0) === 'S') {
             level = 'STAT';
         }
         else {level = cls.value.charAt(4) + '00s';}

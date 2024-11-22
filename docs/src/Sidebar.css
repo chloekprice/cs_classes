@@ -1,7 +1,81 @@
-.sidebar {
+.Site {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.content {
+    display: flex;
+    overflow: hidden;
+    flex: 1;
+}
+
+.main-content {
+    flex: 1;
     padding: 20px;
-    width: 250px;
-    background-color: #f4f4f4;
+    overflow-y: auto;
+}
+
+.sidebar {
+    position: relative;
+    width: 275px;
+    height: 110%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 5px 8px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-header {
+    display: flex;
+    align-items: center;
+
+    color: #192e5a;
+    padding: 10px 10px;
+    margin-bottom: 20px;
+    border: 2px solid #e6e8ed;
+    border-radius: 5px;
+    background-color: #f3f5fd;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    width: 220px;
+    box-sizing: border-box;
+    text-align: left;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-header:hover, .level-dropdown:hover {
+    background-color: #dde9fa;
+    border-color: #ccd4ef; 
+}
+
+.level-dropdown {
+    display: flex;
+    align-items: center;
+
+    color: #192e5a;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+    border: 2px solid #e6e8ed;
+    border-radius: 5px;
+    background-color: #f3f5fd;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    width: 205px;
+    box-sizing: border-box;
+    text-align: left;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: auto;
+}
+
+.chevron-icon {
+    padding-left: 10px;
+    font-size: 1.85rem;
 }
 
 .class-list {
@@ -12,16 +86,29 @@
     padding: 10px;
     margin: 5px 0;
     background-color: #e0e0e0;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.2s;
 }
 
-.class-item:hover {
+.class-item-elective {
+    width: 205px;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-left: auto;
+}
+
+.class-item:hover, .class-item-elective:hover {
     background-color: #d0d0d0;
 }
 
-.class-item.selected {
+.class-item.selected, .class-item-elective.selected {
     background-color: #b0c4de;
+    color: #192e5a;
     font-weight: bold;
 }
 
